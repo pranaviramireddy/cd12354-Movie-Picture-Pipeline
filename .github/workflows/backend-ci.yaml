@@ -68,6 +68,10 @@ jobs:
 
       - name: Run tests
         run: pipenv run test
+            - name: Run tests
+        env:
+          FAIL_TEST: "500"
+        run: pipenv run test
 
   build:
     needs: [lint, test]
